@@ -1,0 +1,28 @@
+@startuml Diagrama DAD 
+title Diagrama DAD BiUSCoin
+
+!include class/modulo1.iuml
+!include class/modulo2.iuml
+!include class/modulo3.iuml
+!include class/modulo4.iuml
+!include class/modulo5.iuml
+!include class/modulo6.iuml
+!include class/modulo7.iuml
+!include class/modulo8.iuml
+!include class/modulo9.iuml
+!include class/modulo10.iuml
+!include class/internet.iuml
+!include class/core.iuml
+
+Internet -d-> Modulo1 :> Bytes
+Modulo1 -> Modulo2 :> Mensajes Limpios
+Modulo2 -> Modulo1 :> Enviar Datos a
+Core -d-> Modulo2 :> Bloques Nuevos para Difundir
+Modulo2 -> Modulo4 :> Filtra
+Modulo4 -> Modulo3 :> Guarda lo Filtrado
+
+
+
+
+
+
